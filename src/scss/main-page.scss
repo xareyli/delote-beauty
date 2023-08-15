@@ -1,0 +1,189 @@
+@import 'inc/_style.scss';
+
+@media (max-width: #{$md3 + px}) {
+    .page {
+        padding-top: unset;
+    }
+
+    .section {
+        padding-top: unset;
+    }
+}
+
+.hero {
+    background: url('@img/hero/background.png') center center no-repeat;
+    background-size: cover;
+
+    &__content {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        display: flex;
+        width: 100%;
+    }
+
+    &__title {
+        @include adaptive-value('font-size', 72, 32, 1);
+        text-align: center;
+        line-height: 120%;
+        font-weight: 700;
+    }
+
+    &__scroll {
+        @include adaptive-value('bottom', 102, 50, 1);
+        align-items: center;
+        position: absolute;
+        line-height: 140%;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+
+        i {
+            background: url('@img/hero/mouse.svg');
+            display: inline-block;
+            position: relative;
+            margin-right: 20px;
+            height: 30px;
+            width: 20px;
+
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 2s;
+            animation-name: wave;
+
+            @keyframes wave {
+                from {
+                    top: -5px;
+                }
+
+                to {
+                    top: 5px;
+                }
+            }
+        }
+    }
+}
+
+.quote-block {
+    @include adaptive-value('padding-top', 120, 40, 1);
+    @include adaptive-value('padding-bottom', 95, 20, 1);
+
+    &__logo {
+        @include adaptive-value('margin-bottom', 60, 20, 1);
+        text-align: center;
+    }
+
+    &__paragraph {
+        @include adaptive-value('font-size', 27, 16, 1);
+        text-align: center;
+        line-height: 130%;
+        font-weight: 700;
+    }
+}
+
+.gallery {
+    &__image {
+        width: 100%;
+        aspect-ratio: 396/300;
+    }
+
+    &__content {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    &__item {
+        @include adaptive-value('margin-bottom', 60, 20, 1);
+        flex: 0 0 30%;
+
+        @media (max-width: #{$md3 + px}) {
+            flex: 0 0 45%;
+        }
+
+        @media (max-width: #{$md4 + px}) {
+            flex: 0 0 98%;
+        }
+    }
+}
+
+.cosmetics {
+    @include adaptive-value('padding-top', 90, 20, 1);
+
+    &__content {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    &__item {
+        justify-content: center;
+        margin-bottom: 50px;
+        display: flex;
+        flex: 0 0 25%;
+        opacity: 0.7;
+
+        img {
+            max-width: 95%;
+        }
+
+        @media (max-width: #{$md3 + px}) {
+            flex: 0 0 50%;
+        }
+    }
+}
+
+.portfolio {
+    &__tabs {
+        @include adaptive-value('margin-bottom', 55, 20, 1);
+
+        ul {
+            @include adaptive-value('column-gap', 60, 20, 1);
+            justify-content: center;
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        li {
+            @include adaptive-value('font-size', 24, 16, 1);
+            border-bottom: 1px solid transparent;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            user-select: none;
+            line-height: 130%;
+            font-weight: 400;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                border-bottom-color: $secondary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .portofilo__gallery {
+        justify-content: space-between;
+        transition: opacity .5s;
+        flex-wrap: wrap;
+        display: flex;
+        opacity: 1;
+
+        &.transition {
+            transition: none;
+            opacity: 0;
+        }
+
+        & > * {
+            width: calc(33.3% - 12px);
+            margin-bottom: 24px;
+            aspect-ratio: 1;
+
+            @media (max-width: #{$md4 + px}) {
+                width: calc(50% - 12px);
+            }
+        }
+    }
+}

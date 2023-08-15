@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('html/_head.html', { "title": "Delote-Beauty" })
+
+        <link rel="stylesheet" href="@css/contacts.min.css" />
+        <link rel="stylesheet" href="@js/app.min.js" />
+    </head>
+    <body class="_preload">
+        @@include('html/_header.html')
+
+        @@include('html/_slide-menu.html')
+
+        @@include('html/_preloader.html')
+
+        <div class="page-blackout _blackout"></div>
+
+        <main class="page">
+            <section class="section map">
+                <div class="_container">
+                    <h1 class="section__title">Контакты</h1>
+
+                    <div class="map__image _ibg">
+                        <img src="@img/contacts/map.png" alt="Карта">
+                    </div>
+                </div>
+            </section>
+
+            <section class="contacts">
+                <div class="contacts__content _container">
+                    <div class="contacts__item contact">
+                        <span class="contact__title">
+                            Контакты
+                        </span>
+
+                        <ul class="contact__list">
+                            <li class="contact__item">+7 (812) 123-45-67</li>
+                            <li class="contact__item">+7 (911) 123-45-67</li>
+                            <li class="contact__item">Новоостровский проспект, дом 36 лит. С</li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts__item contact">
+                        <span class="contact__title">
+                            Режим работы
+                        </span>
+
+                        <ul class="contact__list">
+                            <li class="contact__item">C 10:00 до 21:00 (Пн-Пт)</li>
+                            <li class="contact__item">С 11:00 до 20:00 (Сб-Вс)</li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts__item contact">
+                        <span class="contact__title">
+                            Контакты
+                        </span>
+
+                        <ul class="contact__list">
+                            <li class="contact__item">+7 (812) 123-45-67</li>
+                            <li class="contact__item">+7 (911) 123-45-67</li>
+                            <li class="contact__item">Новоостровский проспект, дом 36 лит. С</li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts__item contact">
+                        <span class="contact__title">
+                            Режим работы
+                        </span>
+
+                        <ul class="contact__list">
+                            <li class="contact__item">C 10:00 до 21:00 (Пн-Пт)</li>
+                            <li class="contact__item">С 11:00 до 20:00 (Сб-Вс)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('html/_footer.html')
+    </body>
+</html>

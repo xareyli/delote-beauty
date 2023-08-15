@@ -1,0 +1,27 @@
+@import 'inc/_style.scss';
+
+.artisans {
+    &__image {
+        aspect-ratio: 400/477;
+        width: 100%;
+    }
+
+    &__gallery {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .signed-image {
+        @include adaptive-value('margin-bottom', 60, 20, 1);
+        flex: 0 0 28%;
+
+        @media (max-width: #{$md3 + px}) {
+            flex: 0 0 45%;
+        }
+
+        @media (max-width: #{$md4 + px}) {
+            flex: 0 0 98%;
+        }
+    }
+}

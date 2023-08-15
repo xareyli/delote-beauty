@@ -1,0 +1,40 @@
+.plus {
+    $height: 2px;
+    $width: 20px;
+
+    --color: #fff;
+
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+
+    &::before {
+        transform: rotate(0deg) translate(-50%, -50%);
+        transition: transform 0.3s ease;
+        background-color: var(--color);
+        transform-origin: 0% 0%;
+        display: inline-block;
+        position: absolute;
+        height: $width;
+        width: $height;
+        content: '';
+        left: 50%;
+        top: 50%;
+    }
+
+    &::after {
+        transform: rotate(90deg) translate(-50%, -50%);
+        transition: transform 0.3s ease;
+        background-color: var(--color);
+        transform-origin: 0% 0%;
+        display: inline-block;
+        position: absolute;
+        height: $width;
+        width: $height;
+        content: '';
+        left: 50%;
+        top: 50%;
+    }
+}

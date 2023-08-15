@@ -1,0 +1,67 @@
+@import 'inc/_style.scss';
+
+.service {
+    &__row {
+        @include adaptive-value('margin-bottom', 80, 40, 1);
+        @include adaptive-value('row-gap', 60, 20, 1);
+        justify-content: space-between;
+        display: flex;
+
+        & > * {
+            flex: 0 0 47%;
+        }
+
+        @media (max-width: #{$md3 + px}) {
+            flex-direction: column;
+
+            &.reverse {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+.service-item {
+    &__image {
+        aspect-ratio: 636/536;
+        border-radius: 5px;
+        width: 100%;
+    }
+}
+
+.service-list {
+    &__row {
+        justify-content: space-between;
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        padding-bottom: 20px;
+
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 40, 10, 1);
+        }
+    }
+
+    &__title {
+        @include adaptive-value('font-size', 27, 20, 1);
+        line-height: 130%;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        @include adaptive-value('font-size', 18, 15, 1);
+        line-height: 130%;
+    }
+
+    &__price {
+        @include adaptive-value('font-size', 27, 20, 1);
+        line-height: 130%;
+        font-weight: 700;
+    }
+}

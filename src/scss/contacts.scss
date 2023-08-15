@@ -1,0 +1,34 @@
+@import 'inc/_style.scss';
+
+.map {
+    @include adaptive-value('margin-bottom', 80, 30, 1);
+
+    &__image {
+        aspect-ratio: $max-width-container/576;
+        width: 100%;
+    }
+}
+
+.contacts {
+    &__content {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+    }
+
+    @media (max-width: #{$md2 + px}) and (min-width: #{$md4 + px}) {
+        &__item {
+            margin-bottom: 50px;
+            flex: 0 0 50%;
+        }
+    }
+
+    @media (max-width: #{$md4 + px}) {
+        &__item {
+            margin-bottom: 20px;
+            text-align: center;
+            flex: 0 0 100%;
+        }
+    }
+}

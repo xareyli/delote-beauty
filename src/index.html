@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('html/_head.html', { "title": "Delote-Beauty" })
+
+        <link rel="stylesheet" href="@css/main-page.min.css" />
+        <link rel="stylesheet" href="@js/app.min.js" />
+    </head>
+    <body class="_preload">
+        @@include('html/_header.html')
+
+        @@include('html/_slide-menu.html')
+
+        @@include('html/_preloader.html')
+
+        <div class="page-blackout _blackout"></div>
+
+        <main class="page">
+            <section class="_fullscreen hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Салон красоты<br />«Delote-Beauty»<br />на Крестовском
+                    </h1>
+
+                    <span class="hero__scroll"><i></i> Прокрутите вниз</span>
+                </div>
+            </section>
+
+            <section class="quote-block">
+                <div class="quote-block__content _container">
+                    <div class="quote-block__logo">
+                        <img src="@img/quote-block/blockquote.svg" alt="blockquote" />
+                    </div>
+
+                    <p class="quote-block__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu nibh vitae
+                        amet. Ipsum, pharetra donec ornare velit. Id at quisque accumsan risus ac
+                        ipsum ut. Sit elit, facilisi proin non malesuada sociis tristique. Viverra
+                        augue lorem ut quisque quam tortor, malesuada iaculis.
+                        <br /><br />
+                        Et elementum at nulla venenatis, faucibus integer. Auctor neque eros,
+                        viverra rutrum. Fames ultrices condimentum tortor nec penatibus. Velit
+                        imperdiet sapien fringilla vestibulum sit fames.
+                    </p>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="_container gallery__content">
+                    <div class="signed-image gallery__item">
+                        <div class="signed-image__img-container">
+                            <div class="signed-image__image gallery__image _ibg">
+                                <img src="@img/gallery/1.png" alt="1" />
+                            </div>
+                        </div>
+
+                        <span class="signed-image__title">Парикмахерские услуги</span>
+                    </div>
+
+                    <div class="signed-image gallery__item">
+                        <div class="signed-image__img-container">
+                            <div class="signed-image__image gallery__image _ibg">
+                                <img src="@img/gallery/2.png" alt="1" />
+                            </div>
+                        </div>
+
+                        <span class="signed-image__title">Маникюр</span>
+                    </div>
+
+                    <div class="signed-image gallery__item">
+                        <div class="signed-image__img-container">
+                            <div class="signed-image__image gallery__image _ibg">
+                                <img src="@img/gallery/3.png" alt="1" />
+                            </div>
+                        </div>
+
+                        <span class="signed-image__title">Педикюр</span>
+                    </div>
+
+                    <div class="signed-image gallery__item">
+                        <div class="signed-image__img-container">
+                            <div class="signed-image__image gallery__image _ibg">
+                                <img src="@img/gallery/4.png" alt="1" />
+                            </div>
+                        </div>
+
+                        <span class="signed-image__title">Косметология</span>
+                    </div>
+
+                    <div class="signed-image gallery__item">
+                        <div class="signed-image__img-container">
+                            <div class="signed-image__image gallery__image _ibg">
+                                <img src="@img/gallery/5.png" alt="1" />
+                            </div>
+                        </div>
+
+                        <span class="signed-image__title">Эстетист по телу</span>
+                    </div>
+
+                    <div class="signed-image gallery__item">
+                        <div class="signed-image__img-container">
+                            <div class="signed-image__image gallery__image _ibg">
+                                <img src="@img/gallery/6.png" alt="1" />
+                            </div>
+                        </div>
+
+                        <span class="signed-image__title">Визаж</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cosmetics">
+                <div class="_container cosmetics__content">
+                    <div class="cosmetics__item">
+                        <img src="@img/cosmetics/1.svg" alt="kevin.murphy">
+                    </div>
+                    <div class="cosmetics__item">
+                        <img src="@img/cosmetics/2.svg" alt="orbie">
+                    </div>
+                    <div class="cosmetics__item">
+                        <img src="@img/cosmetics/3.svg" alt="alterna">
+                    </div>
+                    <div class="cosmetics__item">
+                        <img src="@img/cosmetics/4.svg" alt="aldo coppola">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section portfolio">
+                <div class="_container portfolio__content">
+                    <h3 class="section__title">Наши работы</h3>
+
+                    <div class="portfolio__tabs" data-portfolio-tabs>
+                        <ul>
+                            <li data-group="all" class="active">Показать все</li>
+                            <li data-group="Парикмахерские услуги">Парикмахерские услуги</li>
+                            <li data-group="маникюр">Маникюр</li>
+                            <li data-group="педикюр">Педикюр</li>
+                        </ul>
+                    </div>
+
+                    <div class="portofilo__gallery" data-portfolio-gallery>
+                        <img data-group="Парикмахерские услуги" src="@img/portfolio/1.png" alt="">
+                        <img data-group="Парикмахерские услуги" src="@img/portfolio/2.png" alt="">
+                        <img data-group="Парикмахерские услуги" src="@img/portfolio/3.png" alt="">
+                        <img data-group="маникюр" src="@img/portfolio/4.png" alt="">
+                        <img data-group="маникюр" src="@img/portfolio/5.png" alt="">
+                        <img data-group="маникюр" src="@img/portfolio/6.png" alt="">
+                        <img data-group="педикюр" src="@img/portfolio/7.png" alt="">
+                        <img data-group="педикюр" src="@img/portfolio/8.png" alt="">
+                        <img data-group="педикюр" src="@img/portfolio/9.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('html/_footer.html')
+    </body>
+</html>

@@ -1,0 +1,67 @@
+.page-slideout-menu {
+    border-left: 1px solid #fff;
+
+    &__wrapper {
+        padding: 100px 80px 10px;
+        @include adaptive-value('padding-left', 80, 10, 1);
+        @include adaptive-value('padding-right', 80, 10, 1);
+        @include adaptive-value('padding-top', 100, 60, 1);
+        position: relative;
+    }
+
+    &__close-btn {
+        @include adaptive-value('left', 70, 5, 1);
+    }
+
+    &__nav {
+        @media (min-width: #{$md2 + px}) {
+            display: none;
+        }
+
+        li {
+            line-height: 130%;
+            font-size: 18px;
+            margin-bottom: 15px;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__paragraph {
+        @include adaptive-value('margin-bottom', 80, 20, 1);
+        line-height: 130%;
+        font-size: 18px;
+    }
+
+    &__block {
+        @include adaptive-value('margin-bottom', 60, 10, 1);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.slideout-block {
+    flex-direction: column;
+    display: flex;
+
+    &__title {
+        font-family: $secondary-font;
+        line-height: 120%;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    &__item {
+        line-height: 130%;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    &__title + * {
+        margin-top: 25px;
+    }
+}
